@@ -44,6 +44,21 @@ h2 {
 
 }
 
+.burguer-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  text-align: center;
+  display: none;
+  line-height: 40px;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  z-index: 99;
+  color: #fff;
+}
+
 .header {
   background: #212930;
   color: #fff;
@@ -301,12 +316,32 @@ h2 {
 } 
 
 @media screen and (max-width:767px){
+  .burguer-button  {
+    display: block;
+  }
   .header {
     display: block;
     height: auto;
   }
   .header--logo {
     text-align: center;
+  }
+  .menu {
+    position: fixed;
+    background-color: rgba(2, 111, 255, .9);
+    z-index: 98;
+    top: 0;
+    left: -100vw;
+    bottom: 0;
+    width: 100vw;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+  }
+  .menu.is-active {
+    left: 0;
   }
   .menu ul {
     display: block;
@@ -316,6 +351,9 @@ h2 {
   }
   .menu a {
     justify-content: center;
+    height: 40px;
+    font-size: 2em;
+    margin-bottom: 3em;
   }
 
   

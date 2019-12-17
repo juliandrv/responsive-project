@@ -6,19 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" type="image/png" href="images/favicon.png">
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro&display=swap" rel="stylesheet">
-<!--   <link rel="stylesheet" href="css/media.css" media="screen and (max-width:768px)">
+  <script src="https://kit.fontawesome.com/18c63fbf5e.js" crossorigin="anonymous"></script><!--   <link rel="stylesheet" href="css/media.css" media="screen and (max-width:768px)">
  -->  <link rel="stylesheet" href="css/style.css">
   <title>Julián Ramírez</title>
 </head>
 <body>
+  <i class="fas fa-bars burguer-button" id="burger-menu"></i>
   <header class="header">
     <div class="container">
       <figure class="header--logo"><img src="images/logo.png" alt="Logo de Julián Ramírez"></figure>
       <nav class="menu">
         <ul>
-          <li><a href="#portafolio">Portafolio</a></li>
-          <li><a href="#eventos">Experiencia</a></li>
-          <li><a href="#contacto">Trabajemos juntos</a></li>
+          <li><a class="menu1" href="#portafolio">Portafolio</a></li>
+          <li><a class="menu2" href="#eventos">Experiencia</a></li>
+          <li><a class="menu3" href="#contacto">Trabajemos juntos</a></li>
         </ul>
       </nav>
     </div>
@@ -125,5 +126,22 @@
       <div>by Platzi </div>
     </div>
   </footer>
+  <script>
+    let burgerButton = document.querySelector('#burger-menu')
+    let menu = document.querySelector('.menu');
+    let link1 = document.querySelector('.menu1')
+    let link2 = document.querySelector('.menu2')
+    let link3 = document.querySelector('.menu3')
+    burgerButton.addEventListener('click', hideShow)
+    link1.addEventListener('click', hideMenu)
+    link2.addEventListener('click', hideMenu)
+    link3.addEventListener('click', hideMenu)
+    function hideShow() {
+      menu.classList.toggle('is-active')
+    }
+    function hideMenu() {
+        menu.classList.remove('is-active')
+    }
+  </script>
 </body>
 </html>
