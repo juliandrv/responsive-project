@@ -294,7 +294,7 @@ h2 {
 }
 
 
-@media screen and (max-width:1024px){
+@media screen and (max-width:1023px){
   .hero {
     height: auto;
     position: relative;
@@ -356,7 +356,9 @@ h2 {
     margin-bottom: 3em;
   }
 
-  
+  .portfolio  {
+    padding: 20px 5px;
+  }
   .portfolio__project {
     display: block;
   }
@@ -389,6 +391,9 @@ h2 {
 }
 
 @media screen and (max-width:650px){
+  h2 {
+    margin-bottom: 10px;
+  }
   .events__container {
     width: auto;
     flex-shrink: initial;
@@ -413,7 +418,7 @@ h2 {
   }
   .portfolio__project--details {
     width: auto;
-    font-size: 12px;
+    font-size: 14px;
   }
   .events__container--details {
     margin: -2em .5em .5em;

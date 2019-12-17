@@ -127,21 +127,30 @@
     </div>
   </footer>
   <script>
-    let burgerButton = document.querySelector('#burger-menu')
+    let widthScreen = window.matchMedia('screen and (max-width:767px)')
     let menu = document.querySelector('.menu');
     let link1 = document.querySelector('.menu1')
     let link2 = document.querySelector('.menu2')
     let link3 = document.querySelector('.menu3')
-    burgerButton.addEventListener('click', hideShow)
+    let burgerButton = document.querySelector('#burger-menu')
+    widthScreen.addListener(screenValidation)
     link1.addEventListener('click', hideMenu)
     link2.addEventListener('click', hideMenu)
     link3.addEventListener('click', hideMenu)
+    function screenValidation(event) {
+      if (event.matches) {
+        burgerButton.addEventListener('click', hideShow)
+      } else {
+        burgerButton.removeEventListener('click', hideShow)
+      }
+    }
     function hideShow() {
       menu.classList.toggle('is-active')
     }
     function hideMenu() {
         menu.classList.remove('is-active')
     }
+    screenValidation(widthScreen)
   </script>
 </body>
 </html>
